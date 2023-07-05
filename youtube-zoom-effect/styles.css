@@ -1,0 +1,233 @@
+body {
+  margin: 0px;
+  overflow-y: hidden;
+}
+
+.effect-container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(47, 151, 134, 0.815);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.page-effect {
+  position: absolute;
+  width: 30%;
+  aspect-ratio: 16/9;
+  border-radius: .5rem;
+  animation: full-fullscreen 3.5s forwards;
+  animation-delay: 3.35s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.08);
+}
+
+.page-with-youtube {
+  background-color: rgb(255, 255, 255);
+  width: 30%;
+  aspect-ratio: 16 / 9;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 1vw;
+  padding: 1vh 3vh;
+  align-items: center;
+}
+
+.youtube-icon {
+  width: 4vw;
+  aspect-ratio: 4 / 1;
+  /* background-color: red; */
+  border-radius: .5rem;
+  display: flex;
+  gap: .5vw;
+  align-items: center;
+}
+
+.youtube-icon .icon {
+  background-color: red;
+  border-radius: .5rem;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.youtube-icon .icon-text {
+  background-color: rgb(240, 240, 240);
+  height: 80%;
+  display: flex;
+  flex: 1;
+  border-radius: 1rem;
+}
+
+.search-bar {
+  background-color: rgb(240, 240, 240);
+  height: 80%;
+  aspect-ratio: 8/1;
+  display: flex;
+  border-radius: 1rem;
+  margin-left: 6vw;
+}
+
+.youtube-body {
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  flex: 1;
+  padding: 2vh 3vh 0vh 3vh;
+  flex-direction: row;
+}
+
+.youtube-player {
+  background-color: rgb(255, 255, 255);
+  /* width: 12vw; */
+  aspect-ratio: 16 / 9;
+  height: 22vh;
+  border-radius: .5rem;
+  /* z-index: 4; */
+  animation: fullscreen 3s forwards;
+  animation-delay: 3s;
+}
+
+.recommended-videos {
+  /* background-color: rgb(146, 146, 146); */
+  width: 100%;
+  height: 100%;
+  padding: 0vh 0vh 0vh 1vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  /* overflow: hidden; */
+
+}
+
+.video-choice {
+  width: 100%;
+  height: 2.5vh;
+  background-color: white;
+  border-radius: .5rem;
+  padding: .5vh;
+  display: flex;
+  flex-direction: row;
+  gap: .5vh;
+}
+
+.video-picture {
+  /* background-color: red; */
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: .5vh;
+}
+
+.video-name {
+  background-color: rgb(240, 240, 240);
+  height: 1vh;
+  margin-top: .25vh;
+  border-radius: 1rem;
+}
+
+.video-choice:nth-of-type(1) .video-name {
+  width: 40%;
+}
+
+.video-choice:nth-of-type(2) .video-name {
+  width: 35%;
+}
+
+.video-choice:nth-of-type(3) .video-name {
+  width: 20%;
+}
+
+.video-choice:nth-of-type(4) .video-name {
+  width: 50%;
+}
+
+.video-choice:nth-of-type(5) .video-name {
+  width: 30%;
+}
+
+.video-choice:nth-of-type(1) .video-picture {
+  background: linear-gradient(0deg, rgb(170, 33, 74), rgb(117, 26, 41))
+}
+
+.video-choice:nth-of-type(2) .video-picture {
+  background: linear-gradient(170deg, rgb(26, 21, 15), rgb(255, 145, 0))
+}
+
+.video-choice:nth-of-type(3) .video-picture {
+  background: linear-gradient(0deg, rgb(241, 241, 241), rgb(214, 58, 58))
+}
+
+.video-choice:nth-of-type(4) .video-picture {
+  background: linear-gradient(30deg, rgb(10, 31, 56), rgb(100, 101, 124))
+}
+
+.video-choice:nth-of-type(5) .video-picture {
+  background: linear-gradient(270deg, rgb(231, 231, 231), rgb(161, 141, 235))
+}
+
+.overlayed-youtube-player {
+  height: 22vh;
+  aspect-ratio: 16/9;
+  background-color: white;
+  border-radius: .5rem;
+  margin-top: 3.2vw;
+  margin-left: 3vh;
+  animation: half-fullscreen .25s forwards;
+  animation-delay: 3s;
+  animation-timing-function: linear;
+}
+
+/* this is a silly h1, not good practice AT ALL. please make no judgements. */
+h1 {
+  position: absolute;
+  left: 10rem;
+  top: 10rem;
+  color: rgba(0, 0, 0, 0.719);
+  font-size: 8rem;
+  margin: 0px;
+  filter: opacity(0);
+  animation: fade-in 2s cubic-bezier(0.19, 1, 0.22, 1) 10s forwards;
+}
+
+@keyframes half-fullscreen {
+  0% {
+    margin-top: 3.2vw;
+    margin-left: 3vh;
+    height: 22vh;
+  }
+
+  100% {
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 100%;
+  }
+}
+
+@keyframes full-fullscreen {
+  0% {
+    width: 30%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    filter: opacity(0)
+  }
+
+  100% {
+    filter: opacity(1)
+  }
+}
