@@ -1,0 +1,125 @@
+.logo-holder {
+  background-color: rgb(172, 61, 61);
+  height: 50vh;
+  width: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.logo {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  /* outline: 1px greenyellow solid; */
+  display: flex;
+  flex: 1;
+}
+
+.cell {
+  display: flex;
+  flex: 1;
+}
+
+.row:nth-of-type(1) .cell {
+  background: linear-gradient(0deg, #fc5f71, #f83a66);
+  border-top: #ffffff 3px solid;
+  animation: slide-from-left 3s;
+
+}
+
+.row:nth-of-type(2) .cell {
+  background: linear-gradient(0deg, #ff867c, #fc5f71)
+}
+
+.row:nth-of-type(3) .cell {
+  background: linear-gradient(0deg, #ff887c, #ff867c);
+  border-bottom: #ffffff 3px solid;
+}
+
+/* top-left */
+.row:nth-of-type(1) .cell:nth-of-type(1) {
+  border-radius: 1rem 0rem 0rem 0rem;
+  transform: translateY(-1000%) translateX(-600%);
+  border-left: #ffffff 3px solid;
+  animation: connect 2s forwards;
+}
+
+/* top-middle */
+.row:nth-of-type(1) .cell:nth-of-type(2) {
+  transform: translateY(500%) translateX(-1000%);
+  animation: connect 2s forwards;
+
+}
+
+/* top-right */
+.row:nth-of-type(1) .cell:nth-of-type(3) {
+  border-radius: 0rem 1rem 0rem 0rem;
+  border-right: #ffffff 3px solid;
+  transform: translateY(-400%) translateX(100%);
+  animation: connect 2s forwards;
+
+}
+
+/* middle-left */
+.row:nth-of-type(2) .cell:nth-of-type(1) {
+  border-left: #ffffff 3px solid;
+  transform: translateY(200%) translateX(-700%);
+  animation: connect 2s forwards;
+
+}
+
+/* middle-center */
+.row:nth-of-type(2) .cell:nth-of-type(2) {
+  transform: translateY(0px) translateX(1000px);
+  animation: connect 2s forwards;
+
+}
+
+/* middle-right */
+.row:nth-of-type(2) .cell:nth-of-type(3) {
+  border-right: #ffffff 3px solid;
+  transform: translateY(300%) translateX(-500%);
+  animation: connect 2s forwards;
+
+}
+
+/* bottom-left */
+.row:nth-of-type(3) .cell:nth-of-type(1) {
+  border-radius: 0rem 0rem 0rem 1rem;
+  border-left: #ffffff 3px solid;
+  transform: translateY(600%) translateX(-150%);
+  animation: connect 2s forwards;
+
+}
+
+/* bottom-middle */
+.row:nth-of-type(3) .cell:nth-of-type(2) {
+  transform: translateY(-1000%) translateX(0px);
+  animation: connect 2s forwards;
+
+
+}
+
+/* bottom-right */
+.row:nth-of-type(3) .cell:nth-of-type(3) {
+  border-radius: 0rem 0rem 1rem 0rem;
+  transform: translateY(500%) translateX(100%);
+  border-right: #ffffff 3px solid;
+  animation: connect 2s forwards;
+
+}
+
+@keyframes connect {
+  0% {}
+
+  100% {
+    transform: translateY(0%) translateX(0%);
+  }
+}

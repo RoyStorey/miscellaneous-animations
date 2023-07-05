@@ -1,0 +1,180 @@
+body {
+  /* background-color: black; */
+}
+
+.cards-container {
+  /* border: 2px red solid; */
+  height: 40vh;
+  width: 40vh;
+  position: relative
+}
+
+.card {
+  position: absolute;
+  box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.08);
+  /* background: linear-gradient(0deg, rgb(146, 187, 219), rgb(131, 181, 204)); */
+  height: 80%;
+  width: 65%;
+  left: 50%;
+  top: 50%;
+  margin-top: -40%;
+  border-radius: 3%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  perspective: 600px;
+  -webkit-perspective: 600px;
+}
+
+.card:nth-of-type(1) {
+  margin-left: -10%;
+  z-index: 3;
+  transform: scale(.9);
+  background: linear-gradient(0deg, rgb(146, 187, 219), rgb(131, 181, 204));
+  animation-name: bounce1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+}
+
+.card:nth-of-type(2) {
+  margin-left: -30%;
+  z-index: 2;
+  transform: scale(1);
+  background: linear-gradient(0deg, rgb(218, 219, 146), rgb(199, 204, 131));
+  animation-name: bounce2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: .5s;
+}
+
+.card:nth-of-type(3) {
+  margin-left: -50%;
+  z-index: 1;
+  transform: scale(.9);
+  background: linear-gradient(0deg, rgb(219, 161, 146), rgb(204, 154, 131));
+  animation-name: bounce3;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+
+.rows-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  padding: 1vw;
+  box-sizing: border-box;
+}
+
+.row-1 {
+  height: 1vh;
+  display: flex;
+  gap: 1vw
+}
+
+.row-1 .bar-1 {
+  width: 6vw;
+  background-color: rgba(255, 255, 255, 0.336);
+  border-radius: 5px;
+  height: 100%;
+}
+
+.row-1 .bar-2 {
+  width: 20%;
+  background-color: rgba(255, 255, 255, 0.336);
+  border-radius: 5px;
+  height: 100%;
+}
+
+.row-2 {
+  height: 5vh;
+  display: flex;
+  gap: 1vw;
+}
+
+.row-2 .bar-1 {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.600);
+  width: 3vw;
+  border-radius: 5px;
+}
+
+.row-2 .bar-2 {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.600);
+  border-radius: 5px;
+  width: 60%;
+}
+
+.bottom-of-page {
+  height: 8vh;
+  width: 100%;
+  background-color: white;
+  padding: 2vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.bottom-of-page .bar-1 {
+  width: 6vw;
+  background-color: rgba(0, 0, 0, 0.062);
+  border-radius: 5px;
+  height: 1vh;
+}
+
+.play-button {
+  position: absolute;
+  right: 4vh;
+  bottom: 5vh;
+  background-color: rgb(255, 255, 255);
+  height: 6vh;
+  width: 6vh;
+  border-radius: 100%;
+  box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.08);
+}
+
+@keyframes bounce1 {
+  0% {
+    transform: translateY(0%) scale(1.1);
+  }
+
+  50% {
+    transform: translateY(2%) scale(1.1);
+  }
+
+  100% {
+    transform: translateY(0%) scale(1.1);
+  }
+}
+
+@keyframes bounce2 {
+  0% {
+    transform: translateY(0%) scale(1.0);
+  }
+
+  50% {
+    transform: translateY(2%) scale(1.0);
+  }
+
+  100% {
+    transform: translateY(0%) scale(1.0);
+  }
+}
+
+@keyframes bounce3 {
+  0% {
+    transform: translateY(0%) scale(.9);
+  }
+
+  50% {
+    transform: translateY(2%) scale(.9);
+  }
+
+  100% {
+    transform: translateY(0%) scale(.9);
+  }
+}
