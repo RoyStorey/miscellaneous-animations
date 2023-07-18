@@ -1,5 +1,5 @@
 body {
-  /* background-color: black; */
+  background-color: #202330
 }
 
 .cards-container {
@@ -12,7 +12,6 @@ body {
 .card {
   position: absolute;
   box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.08);
-  /* background: linear-gradient(0deg, rgb(146, 187, 219), rgb(131, 181, 204)); */
   height: 80%;
   width: 65%;
   left: 50%;
@@ -23,7 +22,6 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-
   perspective: 600px;
   -webkit-perspective: 600px;
 }
@@ -37,6 +35,7 @@ body {
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-delay: 0s;
+  filter: opacity(1)
 }
 
 .card:nth-of-type(2) {
@@ -48,6 +47,7 @@ body {
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-delay: .5s;
+  filter: opacity(.8)
 }
 
 .card:nth-of-type(3) {
@@ -59,6 +59,7 @@ body {
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-delay: 1s;
+  filter: opacity(.6)
 }
 
 .rows-container {

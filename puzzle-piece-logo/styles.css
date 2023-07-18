@@ -1,7 +1,11 @@
+body {
+  background-color: #202330
+}
+
 .logo-holder {
-  background-color: rgb(172, 61, 61);
-  height: 50vh;
-  width: 50vh;
+  background-color: rgb(255, 255, 255);
+  height: 90vh;
+  width: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
